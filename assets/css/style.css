@@ -16,28 +16,24 @@ font-family: 'Oswald', sans-serif;
 body {
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
+    background: green;
 }
 
-header ul {
-    background: pink;
-}
-
-header ul li {
-    display: inline-block;
-    padding: 10px 20px;
-}
-
-main {
-    background: #ddd;
-}
-
-main ul {
-    list-style: square;
+/*TYPOGRAPHY*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
 }
 
 h1 {
-    font-size: 1.5rem;
     display: inline-block;
+    background: orange;
+    padding: 20px;
+
 }
 
 h2 {
@@ -50,13 +46,53 @@ h3 {
     font-size: 1.5rem;
     padding: 40px 0 20px 0;
     font-weight: 600;
+}
+
+/* MAIN CONTAINTERS*/
+
+.wrapper {
+    background: pink;
+    width: 980px;
+    margin: 0 auto;
+}
+
+header {
+    background: firebrick;
+    height: 200px;
+    padding: 20px;
+}
+
+nav {
+    background: pink;
+}
+
+nav ul {}
+
+nav ul li {
+    display: inline;
+    margin: 0 auto;
 
 }
 
-h1,
-h2,
-h3 {
-    font-family: 'Oswald', sans-serif;
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    background-color: cornsilk;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    background-color: aqua;
+}
+
+main {
+    background: #ddd;
+}
+
+main ul {
+    list-style: square;
 }
 
 
@@ -77,17 +113,6 @@ img {
     width: 50%;
 }
 
-header {
-    background: red;
-}
-
-div {
-    background: #F4F6F6;
-    width: 60%;
-    box-sizing: border-box;
-    padding: 25px;
-    margin: 0 auto;
-}
 
 
 footer {
