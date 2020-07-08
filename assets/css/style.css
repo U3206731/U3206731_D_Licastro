@@ -1,10 +1,12 @@
 @import url(reset.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /*
 font-family: 'Montserrat', sans-serif;
 font-family: 'Oswald', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'DM Serif Display', serif;
 200 extra l
 300 light
 400 reg
@@ -14,10 +16,9 @@ font-family: 'Oswald', sans-serif;
 */
 
 body {
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffff;
-
 }
 
 /*TYPOGRAPHY*/
@@ -27,47 +28,45 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     color: #444444
 }
 
 h1 {
     display: inline-block;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 1.11111em;
+    padding-top: 1.11111em;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 0.18em;
     font-size: 2.5rem;
-
 }
 
 h2 {
     font-size: 3rem;
     font-weight: 400;
-    padding: 10px;
-    letter-spacing: 1px;
-    border-bottom: 3px solid #0047be;
-    margin-bottom: 20px;
-    margin-right: 40px;
-
+    padding: 0.2em;
+    letter-spacing: 0.06em;
+    border-bottom: 0.1em solid #0047be;
+    margin-bottom: 1.11111em;
+    margin-right: 1.1em;
 }
 
 h3 {
-    font-style: italic;
+    /*    font-style: italic;*/
     font-size: 1.5rem;
-    letter-spacing: 1.5px;
-    padding: 20px 0 10px 10px;
+    letter-spacing: 0.0833333em;
+    padding: 1.11111em 0 0.555556em 0.555556em;
     font-weight: 600;
-    border-bottom: 3px solid #0047be;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    clear: both;
+    /*    border-bottom: 0.1666667em solid #0047be;*/
+    margin-right: 0.555556em;
+    margin-bottom: 0.555556em;
+
 }
 
 p {
-    line-height: 1.3em;
+    line-height: 1.4em;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 1.666667em;
 }
 
 /*ANCHOR STYLES*/
@@ -89,32 +88,34 @@ a:active {}
 /*MAIN CONTAINTERS*/
 
 .wrapper {
-    width: 980px;
+    width: 54.4444em;
     margin: 0 auto;
 }
 
 header {
     background: #ddd;
-    padding: 25px;
-    height: 200px;
+    padding: 1.38889em;
+    height: 8.33333em;
+    border-bottom: 0.0555556em solid #d3d3d3;
+
 }
 
 nav {
     float: right;
-    margin-top: 40px;
+    margin-top: 58px;
 }
 
 nav ul {}
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 0em;
 }
 
 nav ul li a {
     color: #444;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 0.555556em 0.833333em;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -131,15 +132,41 @@ main {
     overflow: auto;
 }
 
+main p,
+main ul,
+main h3 {
+    max-width: 40em;
+
+}
+
+main p {
+    text-align: justify;
+    line-height: 1.5em;
+}
+
 main ul {
-    list-style: square;
-    margin-bottom: 30px;
-    margin-left: 20px;
+    /*    list-style: square;*/
+    margin-bottom: 1.666667em;
+    margin-left: 1.11111em;
+    line-height: 1.3em;
+
 }
 
 main ul li {
-    margin-left: 20px;
-    line-height: 1.3em
+    margin-left: 1.11111em;
+    line-height: 1.5em;
+    list-style-position: outside;
+
+}
+
+main ul li::before {
+    content: "\2616";
+    color: #0047be;
+    font-weight: bold;
+    display: inline-block;
+    width: 2em;
+    margin-left: -2em;
+
 }
 
 i {
@@ -147,12 +174,13 @@ i {
 }
 
 .hero-container {
-    margin-bottom: 20px;
+    margin-bottom: 1.11111em;
+    margin-top: 1.11111em;
 
 }
 
 .hero {
-    min-height: 450px;
+    min-height: 25em;
     background-image: url(../images/crossnorth.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -160,30 +188,71 @@ i {
     background-color: #ddd;
 }
 
-.home main p {
-    font-size: 200%;
-}
-
-.home main p::before {
-    content: url(../images/crossnorth.jpg);
-}
-
-.home main p::after {
-    content: url(../images/crossnorth.jpg);
-}
-
 .main-image {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #ddd;
-    margin: 20px 0 20px 0;
-    min-height: 450px;
+    margin: 2em 0 2em 0;
+    min-height: 25em;
 }
 
 .main-image h2 {
     float: right;
 }
+
+.right-image {
+    width: 40%;
+    float: right;
+    margin: 1.11111em 0 1.11111em 1.11111em;
+    height: 16.66667em;
+    background-position: top;
+    background-size: cover;
+
+}
+
+.float-right {
+    float: right;
+    height: 16.66667em;
+    width: 16.66667em;
+    margin: 0 0 1.11111em 1.11111em;
+    background-position: bottom;
+    background-size: cover;
+    padding-right: 9.375em;
+
+}
+
+.bottom-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+    margin: 1.11111em 0 5em 0;
+    min-height: 30em;
+
+}
+
+.grid-top {
+    background: white;
+    color: #444444;
+    /*    padding-right: 20px;*/
+    display: flex;
+    flex-direction: row
+}
+
+.grid-top figure {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    padding: 20px;
+}
+
+.grid-top figure img {
+    width: 100%;
+    box-shadow: #d3d3d3 0 0 10px;
+
+}
+
 
 .grey {
     filter: grayscale(100%);
@@ -207,77 +276,42 @@ i {
     background-size: cover;
     background-position: center;
     background-color: #ddd;
-    margin: 20px 0 20px 0;
+    margin: 1.11111em 0 1.11111em 0;
 */
 }
 
 .ch3 {
     background-image: url(../images/churchill-house-15.jpg);
     background-repeat: no-repeat;
-    /*
-    background-size: cover;
     background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
 }
 
 .ch4 {
     background-image: url(../images/crosswest.jpg);
     background-repeat: no-repeat;
-    /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
 }
 
 .ch5 {
     background-image: url(../images/churchill-house-33.jpg);
     background-repeat: no-repeat;
-    /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
 }
 
 .ch6 {
     background-image: url(../images/churchill-house-34.jpg);
     background-repeat: no-repeat;
-    /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
 }
 
 .ch7 {
     background-image: url(../images/extra1-churchill-house-by-robin%20boyd-photo-copyright-darren-bradley.jpg);
     background-repeat: no-repeat;
-    /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
 }
 
 .ch8 {
-    background-image: url(../images/churchill-house-39.jpg);
+    background-image: url(../images/churchill-house-47.jpg);
     background-repeat: no-repeat;
-    /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
 }
 
-/*ROBIN BOYD PAGE IMAGES*/
+/*ROBIN BOYD PAGE IMAGES */
 
 .rb1 {
     background-position: top;
@@ -287,47 +321,21 @@ i {
 .rb2 {
     background-image: url(../images/churchill-house-5.png);
     background-repeat: no-repeat;
-    /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
+
 }
 
 .rb3 {
-    background-image: url(../images/churchill-house-12.jpg);
+    background-image: url(../images/churchill-house-36.jpg);
     background-repeat: no-repeat;
-    /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
 }
 
-/*ABOUT PAGE IMAGES*/
-.right-image {
-    width: 300px;
-    float: right;
-    margin: 20px 0 20px 20px;
-    height: 300px;
-    background-position: bottom;
-    background-size: cover;
-}
-
+/*ABOUT PAGE IMAGES */
 
 .ap1 {
     background-position: top;
     background-image: url(../images/churchill-house-46.jpg);
     background-repeat: no-repeat;
 
-    /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
 }
 
 
@@ -335,56 +343,98 @@ i {
     background-image: url(../images/churchill-house-38.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
 }
 
 .image-col {
-    width: 300px;
-    height: 400px;
+    width: 16.66667em;
+    height: 22.2222em;
     float: left;
     background-size: cover;
     background-position: center;
-    margin-bottom: 40px;
+    margin-bottom: 5em;
+}
+
+.image-stack {
+    width: 16.66667em;
+    height: 22.2222em;
+    float: left;
+    margin-left: 90px;
+    margin-right: 40px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5em;
+}
+
+.upper {
+    align-content: center;
+}
+
+.lower {
+    margin-top: 1.1em;
+    /*    align?*/
 }
 
 .ap3 {
     background-image: url(../images/churchill-house-3.jpg);
     background-repeat: no-repeat;
-    /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
 }
 
 .ap4 {
     background-image: url(../images/churchill-house-23.jpg);
     background-repeat: no-repeat;
-    margin: 0 40px;
-
-    /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
-*/
+    margin: 0 2.22222em;
 }
 
 .ap5 {
     background-image: url(../images/churchill-house-41.jpg);
     background-repeat: no-repeat;
+}
+
+.blockquote {
+    max-width: 900px;
+    margin: 10px 30px;
+    padding: 25px;
     /*
-    background-size: cover;
-    background-position: center;
-    background-color: #ddd;
-    margin: 20px 0 20px 0;
+    background: #f8fffe;
+    border: 1px solid red;
 */
+    color: #444444;
+    box-sizing: border-box;
+}
+
+.blockquote__text {
+    font-size: 1.4em;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 0;
+
+}
+
+
+/*
+blockquote::before {
+    content: "\2774";
+    font-size: 100px;
+    color: #889c0b;
+    position: relative;
+    top: -0.2em;
+    left: -0.5em;
+
+}
+
+blockquote::after {
+    content: "\2775";
+    font-size: 100px;
+    color: #889c0b;
+    position: relative;
+    bottom: -0.6em;
+    right: 0;
+}
+*/
+
+.blockquote__text:not(:last-child) {
+    margin-bottom: 1em;
 }
 
 q {
@@ -393,17 +443,86 @@ q {
 }
 
 img {
-    width: 50%;
+    max-width: 100%;
+}
+
+.social {}
+
+.social ul {
+    text-align: right;
+    /*    margin-right: 60px;*/
+}
+
+.social ul li {
+    display: inline;
+}
+
+
+.social img {
+    height: 24px;
+    width: 24px;
 }
 
 footer {
-    margin-top: 40px;
+    margin-top: 2.22222em;
     clear: both;
-    padding: 20px;
+    padding: 1.11111em;
     background: #ddd;
-    border-top: 1px solid #d3d3d3;
+    border-top: 0.0555556em solid #d3d3d3;
+    /*    width: 100%;*/
+    min-height: 200px;
 }
 
 footer p {
-    font-size: .85rem;
+
+    font-size: .9em;
 }
+
+.col {
+    width: 50%;
+    float: left;
+}
+
+/*MOBILE FIRST DESIGN*/
+@media (max-width:375px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+    .wrapper {
+        width: 100%;
+    }
+
+    h1 {
+        letter-spacing: 0;
+    }
+
+    header {
+        padding: 0;
+        margin: 0;
+    }
+
+    .float-right {
+        width: 100%;
+    }
+
+    .right-image {
+        width: 40%;
+        height: 16.66667em;
+        background-position: top;
+        background-size: cover;
+        margin-left: 14em;
+        margin-bottom: 2em;
+    }
+
+    main ul li {
+        margin-left: 9em;
+        line-height: 1.5em;
+
+        list-style-position: outside main p {
+            text-align: justify;
+            line-height: 1.5em;
+            margin-bottom: 3em;
+        }
+
+        @media (min-width:641px) {
+            /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+        }
